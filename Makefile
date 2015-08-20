@@ -57,7 +57,7 @@ endif
 
 DLLS_DIR=../dlls
 SDKSRC=../hlsdk
-METADIR=../metamod
+METADIR=../metamod-am
 
 COMPILE_TZ=EET
 ## Developer overrides
@@ -185,7 +185,7 @@ CCDEBUG+= -ggdb3
 #############################################################################
 
 SRCDIR=.
-INCLUDEDIRS+=-I$(SRCDIR) -I$(METADIR) -I$(SDKSRC)/engine -I$(SDKSRC)/common -I$(SDKSRC)/pm_shared -I$(SDKSRC)/dlls -I$(SDKSRC) -I../metamod-p/metamod-p-cod/metamod
+INCLUDEDIRS+=-I$(SRCDIR) -I$(METADIR) -I$(SDKSRC)/engine -I$(SDKSRC)/common -I$(SDKSRC)/pm_shared -I$(SDKSRC)/dlls -I$(SDKSRC)
 FILES_ALL = *.cpp *.h [A-Z]* *.rc
 
 CFLAGS=-Wall -Wno-unknown-pragmas -Wno-attributes
