@@ -57,7 +57,7 @@ endif
 
 DLLS_DIR=../dlls
 SDKSRC=../hlsdk
-METADIR=../metamod-am
+METADIR=../metamod-am/metamod
 
 COMPILE_TZ=EET
 ## Developer overrides
