@@ -157,10 +157,10 @@ gamedll_funcs_t *pGamedllFuncs)
 	memcpy(pFunctionTable, &gMetaFunctionTable, sizeof(META_FUNCTIONS));
 	gpGamedllFuncs=pGamedllFuncs;
 	
-	/*struct sigaction sa;
+	struct sigaction sa;
 
 	memset(&sa, 0, sizeof(struct sigaction));
-	sigemptyset(&sa.sa_mask);
+	/*sigemptyset(&sa.sa_mask);
 	sa.sa_sigaction = segfault_sigaction;
 	sa.sa_flags   	= SA_SIGINFO;
 
