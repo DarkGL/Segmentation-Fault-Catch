@@ -126,7 +126,7 @@ void segfault_sigaction(int sig, siginfo_t *info,void *secret){
 //  ifvers			(given) interface_version metamod is using
 //  pPlugInfo		(requested) struct with info about plugin
 //  pMetaUtilFuncs	(given) table of utility functions provided by metamod
-C_DLLEXPORT int Meta_Query(char * /*ifvers */, plugin_info_t **pPlugInfo,
+C_DLLEXPORT int Meta_Query( const char * /*ifvers */, plugin_info_t **pPlugInfo,
 mutil_funcs_t *pMetaUtilFuncs) 
 {
 	// Give metamod our plugin_info struct
