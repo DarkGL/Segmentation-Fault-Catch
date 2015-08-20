@@ -85,7 +85,7 @@ void segfault_sigaction(int sig, siginfo_t *info,void *secret){
 	int i, trace_size = 0;
 	ucontext_t *uc = (ucontext_t *)secret;
 	
-	char bufferPrint[ 1024 ];
+	/*char bufferPrint[ 1024 ];
 	
 	snprintf( bufferPrint, sizeof( bufferPrint ) , "Got signal %d, faulty address is %p, "
 	"from %p\n", sig, info->si_addr, 
@@ -119,7 +119,7 @@ void segfault_sigaction(int sig, siginfo_t *info,void *secret){
 		system(syscom);
 	}
 	
-	exit(0);
+	exit(0);*/
 }
 
 // Metamod requesting info about this plugin:
@@ -159,7 +159,7 @@ gamedll_funcs_t *pGamedllFuncs)
 	
 	struct sigaction sa;
 
-	memset(&sa, 0, sizeof(sa));
+	memset(&sa, 0, sizeof(sigaction));
 	sigemptyset(&sa.sa_mask);
 	sa.sa_sigaction = segfault_sigaction;
 	sa.sa_flags   	= SA_SIGINFO;
