@@ -44,6 +44,8 @@
 
 #include <signal.h>
 
+#include <execinfo.h>
+
 #include "sdk_util.h"		// UTIL_LogPrintf, etc
 #include "log_meta.h"
 
