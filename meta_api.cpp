@@ -129,6 +129,10 @@ void segfault_sigaction(int sig, siginfo_t *info,void *secret){
 C_DLLEXPORT int Meta_Query( const char * /*ifvers */, plugin_info_t **pPlugInfo,
 mutil_funcs_t *pMetaUtilFuncs) 
 {
+	if(!pMetaUtilFuncs) {
+		return(FALSE);
+	}
+	
 	// Give metamod our plugin_info struct
 	*pPlugInfo=&Plugin_info;
 	// Get metamod utility function table.
@@ -141,9 +145,8 @@ mutil_funcs_t *pMetaUtilFuncs)
 //  pFunctionTable	(requested) table of function tables this plugin catches
 //  pMGlobals		(given) global vars from metamod
 //  pGamedllFuncs	(given) copy of function tables from game dll
-C_DLLEXPORT int Meta_Attach(PLUG_LOADTIME /* now */, 
-META_FUNCTIONS *pFunctionTable, meta_globals_t *pMGlobals, 
-gamedll_funcs_t *pGamedllFuncs) 
+C_DLLEXPORT int Meta_Attach(PLUG_LOADTIME now, META_FUNCTIONS *pFunctionTable, 
+		meta_globals_t *pMGlobals, gamedll_funcs_t *pGamedllFuncs)
 {
 	if(!pMGlobals) {
 		LOG_ERROR(PLID, "Meta_Attach called with null pMGlobals");
