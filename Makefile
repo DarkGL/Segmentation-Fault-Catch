@@ -56,7 +56,7 @@ else	## windows
 endif
 
 DLLS_DIR=../dlls
-SDKSRC=../hlsdk
+SDKSRC=../hlsdk-master
 METADIR=../metamod-am/metamod
 
 COMPILE_TZ=EET
