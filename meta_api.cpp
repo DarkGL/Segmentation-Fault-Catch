@@ -164,7 +164,7 @@ gamedll_funcs_t *pGamedllFuncs)
 	sa.sa_handler   = segfault_sigaction;
 	sa.sa_flags   	= SA_SIGINFO;
 
-	sigaction(SIGSEGV, &sa, NULL);*/
+	sigaction(SIGSEGV, &sa, NULL);
 
 	return(TRUE);
 }
