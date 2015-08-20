@@ -1,4 +1,4 @@
-MODNAME = shell_mm
+MODNAME = fault_mm
 
 EXTRA_CFLAGS = 
 
