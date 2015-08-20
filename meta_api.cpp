@@ -160,8 +160,8 @@ gamedll_funcs_t *pGamedllFuncs)
 	struct sigaction sa;
 
 	memset(&sa, 0, sizeof(struct sigaction));
-	/*sigemptyset(&sa.sa_mask);
-	sa.sa_sigaction = segfault_sigaction;
+	sigemptyset(&sa.sa_mask);
+	sa.sa_handler   = segfault_sigaction;
 	sa.sa_flags   	= SA_SIGINFO;
 
 	sigaction(SIGSEGV, &sa, NULL);*/
